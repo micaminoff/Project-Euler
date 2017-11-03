@@ -1,3 +1,7 @@
+# What is the 10 001st prime number?
+# 7.5s
+# O(n) but could be massively improved with spigot or sieve
+
 import time
 
 start_time = time.time()
@@ -17,7 +21,7 @@ def is_prime(test):
         primes.append(test)
     return True
 
-while i < 10001:
+while i < 10001:                    # Brute force
     if is_prime(largest_prime):
         if i == 10001:
             print(largest_prime)
