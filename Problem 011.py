@@ -1,3 +1,9 @@
+# What is the greatest product of four adjacent numbers in the same direction
+# (up, down, left, right, or diagonally) in the 20×20 grid?
+# 0.001s
+# O(x*y)
+# This is ugly but I'm not touching it 'cause it works
+
 import time
 
 start_time = time.time()

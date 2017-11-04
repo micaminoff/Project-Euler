@@ -35,7 +35,6 @@ def evaluate_function(n, a, b):
 def amount_of_primes(a, b):
     primes_found = 0
     for n in range(100):
-        print(n, a, b)
         if not is_prime(evaluate_function(n, a, b)):
             break
         else:

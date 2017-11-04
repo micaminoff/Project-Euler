@@ -1,26 +1,25 @@
+# Find the sum of all the primes below two million.
+# 1.15s
+# O(something), send a pull request with explanation if you want to
+
 import time
-
 start_time = time.time()
-primes = [2, 3]
-prime_sum = 5
-i = 5
 
 
-def is_prime(test):
-    for prime in primes:
-        if test % prime == 0:
-            return False
-        else:
+def e_sieve(limit):                     # Standard sieve of Erastosthenes
+    limit += 1
+    not_prime = set()
+    e_primes = []
+
+    for i in range(2, limit):
+        if i in not_prime:
             continue
-    if test not in primes:
-        primes.append(test)
-    return True
+        for j in range(i*2, limit, i):
+            not_prime.add(j)
 
-while i < 2000000:
-    if is_prime(i):
-        prime_sum += i
-        print(i, prime_sum)
-    i += 2
+        e_primes.append(i)
 
-print(prime_sum)
+    return e_primes
+
+print(sum(e_sieve(2000000)))
 print(time.time() - start_time)

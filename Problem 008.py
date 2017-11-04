@@ -1,3 +1,9 @@
+# Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.
+# What is the value of this product?
+# 0.003s
+# O(n)
+
+
 import time
 
 start_time = time.time()
@@ -5,10 +11,10 @@ num = str(7316717653133062491922511967442657474235534919493496983520312774506326
 biggest_product = 0
 i = 0
 
-while i < len(num) - 13:
+while i < len(num) - 13:            # While the start of our subset is less than 12 away from the end
     product = 1
     for a in range(i, i + 13):
-        product *= int(num[a])
+        product *= int(num[a])      # Multiply all digits in the subset
     if product > biggest_product:
         biggest_product = product
     i += 1
