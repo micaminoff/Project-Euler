@@ -1,3 +1,5 @@
+# I've broken this, apparently
+
 import time
 start_time = time.time()
 # For readability:
@@ -5,7 +7,6 @@ hundred = 7
 thousand = 8
 
 # Vars
-test_num = 15
 length = 0
 three = [1, 2, 6, 9, 10]
 four = [4, 5, 9]
@@ -16,11 +17,11 @@ eight = [13, 14, 19]
 nine = [18]
 
 
-for i in range(1, test_num + 1):
+for i in range(1, 1001):
     if i == 1000:
-        length += 3 + thousand
+        length += 3 + thousand      # Add the letters in "one"
         break
-    string = str(test_num)
+    string = str(i)
     if len(string) == 3:
         a = string[0]
         b = string[1]
@@ -38,5 +39,5 @@ for i in range(1, test_num + 1):
             continue
 
 
-print(test_num, length)
+print(length)
 print(time.time() - start_time)

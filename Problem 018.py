@@ -1,3 +1,9 @@
+# Find the maximum total [path] from top to bottom of the triangle below:
+# Should refactor this into a separate file input
+# 0.0002s
+# O(n) I think
+
+
 import time
 start_time = time.time()
 
@@ -21,8 +27,8 @@ matrix = [row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11,
 
 # Start from row 14 and iterate toward top
 i = 13
-while i >= 0:
-    for j in range(len(matrix[i])):
+while i >= 0:  # i = row
+    for j in range(len(matrix[i])):  # j = column
         left_step = matrix[i][j] + matrix[i + 1][j]
         right_step = matrix[i][j] + matrix[i + 1][j + 1]
         # Replace each value in current row with the sum of the old value and
