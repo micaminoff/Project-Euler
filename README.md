@@ -9,7 +9,6 @@ If these solutions help you, more power to you! I'm also very happy for any crit
 # TODO
 * Fix 17
 * Problem 26
-* Improve 9
 * Improve 14
 * Replace prime function in 3
 * Improve 4
