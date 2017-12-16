@@ -10,6 +10,7 @@ If these solutions help you, more power to you! I'm also very happy for any crit
 * Fix 17
 * Problem 26
 * Problem 28
+* Problem 31
 * Improve 14
 * Replace prime function in 3
 * Improve 4
