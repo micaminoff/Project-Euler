@@ -12,7 +12,7 @@ start_time = time.time()
 
 digit_fifth_powers = []
 
-for i in range(4000, 2000000):
+for i in range(4000, 200000):
     s = 0                           # variable for summing fifth power of each digit
     for digit in str(i):            # for each digit in i
         s += int(digit)**5          # add digit^5 to the sum
