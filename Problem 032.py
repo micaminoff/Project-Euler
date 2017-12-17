@@ -70,15 +70,4 @@ for perm_list in multiplicand_list:  # For each list in our list
 
 print(pandigital_products)
 print(sum(pandigital_products))
-
-# def generate_multiplicands(product):
-#     possible_mults = []
-#     for i in range(1, 9):
-#         if i not in str(product):
-#             possible_mults.append(i)
-#
-#
-# for product in range(1234, 100000):
-#     = generate_multiplicands(product)
-
 print(time.time()-start_time)
