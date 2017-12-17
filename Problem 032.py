@@ -8,6 +8,9 @@
 
 # HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
+# 16.71s, could be improved
+# No clue on time complexity
+
 import time
 from itertools import permutations
 
