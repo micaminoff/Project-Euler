@@ -48,15 +48,14 @@ def generate_multiplicands(number):
 
 
 def generate_input_list():
-    valid_inputs = []
+    valid_inputs = set()
     for i in range(12345, 98765):
         if "0" in str(i):           # Numbers containing 0 can't be pandigital
             continue
         if has_no_doubles(i):
             i = sorted(str(i))      # Sort i to find permutations quickly
             i = int(''.join(i))     # Join the chararray to a string and cast to int
-            if i not in valid_inputs:
-                valid_inputs.append(i)
+            valid_inputs.add(i)     # Add it to a set to automatically discard duplicates
     return valid_inputs
 
 
