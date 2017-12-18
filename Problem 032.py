@@ -8,7 +8,7 @@
 
 # HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
-# 16.71s, could be improved
+# 0.24s, could be improved
 # No clue on time complexity
 
 import time
@@ -41,7 +41,7 @@ def has_no_doubles(number):
 def generate_multiplicands(number):
     list_of_tuples = []             # List for storing tuples, e.g. [0] = (1, 2345),[3] = (1234, 5)
     perms = [''.join(p) for p in permutations(str(number))]
-    for p in perms:                 # Find all possible substrings of each permutation
+    for p in perms:                 # Find all possible substrings of each permutation, kind of
         for i in range(1, len(p)):
             list_of_tuples.append((p[0:i], p[i:]))
     return list_of_tuples
@@ -53,7 +53,10 @@ def generate_input_list():
         if "0" in str(i):           # Numbers containing 0 can't be pandigital
             continue
         if has_no_doubles(i):
-            valid_inputs.append(i)
+            i = sorted(str(i))      # Sort i to find permutations quickly
+            i = int(''.join(i))     # Join the chararray to a string and cast to int
+            if i not in valid_inputs:
+                valid_inputs.append(i)
     return valid_inputs
 
 
