@@ -5,9 +5,9 @@
 # 1.2s, can probably be improved
 # TODO: Split is_palindrome() to preparation and comparison
 
-import time
 from math import floor, ceil
-start_time = time.time()
+from utilities import Timer
+timer = Timer()
 
 
 def is_palindrome(num):
@@ -36,4 +36,4 @@ for i in range(1, 1000000, 2):  # Step 2, since binary numbers ending in 0 canno
 print(double_base_palindromes)
 print(sum(double_base_palindromes))
 
-print(time.time()-start_time)
+print(timer.end())

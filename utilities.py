@@ -1,3 +1,6 @@
+import time
+
+
 def e_sieve(limit):
     """
     Generates and returns all primes below limit as a list
@@ -16,3 +19,15 @@ def e_sieve(limit):
         e_primes.append(i)
 
     return e_primes
+
+
+class Timer:
+
+    def __init__(self):
+        self.start_time = time.time()
+
+    def end(self):
+        secs, ms = divmod((time.time()-self.start_time)*100, 100)
+        mins, secs = divmod(secs, 60)
+        hrs, mins = divmod(mins, 60)
+        return '%02d:%02d:%02d:%03d' % (hrs, mins, secs, ms)
