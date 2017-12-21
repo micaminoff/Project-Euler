@@ -5,11 +5,10 @@
 
 # 3.47s, too slow
 
-import time
 from math import sqrt
-from utilities import e_sieve
+from utilities import e_sieve, Timer
 
-start_time = time.time()
+timer = Timer()
 primes_under_mill = e_sieve(999999)         # Uses sieve of Erastosthenes, check utilities.py for implementation
 
 
@@ -37,4 +36,4 @@ for prime in primes_under_mill:             # Check which prime is a circular pr
 print(circular_primes)
 print(len(circular_primes))
 
-print(time.time() - start_time)
+print(timer.end())
