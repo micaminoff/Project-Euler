@@ -15,9 +15,7 @@ def e_sieve(limit):
             continue
         for j in range(i*2, limit, i):
             not_prime.add(j)
-
         e_primes.append(i)
-
     return e_primes
 
 

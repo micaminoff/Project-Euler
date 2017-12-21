@@ -2,10 +2,9 @@
 # Find the sum of all numbers, less than one million, which are palindromic in base 10 and base 2.
 # (Please note that the palindromic number, in either base, may not include leading zeros.)
 
-# 0.094s, can probably be improved
+# 0.4s, can probably be improved
 # TODO: Split is_palindrome() to preparation and comparison
 
-from math import floor, ceil
 from utilities import Timer
 timer = Timer()
 
@@ -13,16 +12,7 @@ timer = Timer()
 def is_palindrome(num):
     num = str(num)              # Convert input to string
     num = num.lstrip('0b')      # Strip 0b from 0b... binary representation of int
-    reversed_str = list(reversed(num))  # Reverse num for faster second half checking
-    if len(num) == 1:
-        return True             # len(num)==1 must be palindrome
-    if len(num) % 2 != 0:
-        first_half = num[0:ceil(len(num)/2)]    # Get halfway
-        second_half = ''.join(reversed_str[0:ceil(len(num) / 2)])   # Get halfway in reversed string
-    else:
-        first_half = num[0:floor(len(num)/2)]
-        second_half = ''.join(reversed_str[0:floor(len(num) / 2)])
-    return first_half == second_half    # Returns true if the first half of num == reversed second half of num
+    return num == num[::-1]     # Check if the number is the same after it's reversed.
 
 
 double_base_palindromes = []
