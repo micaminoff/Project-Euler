@@ -2,8 +2,8 @@
 # 0.41s
 # O(n^2), a lot of room for improvement
 
-import time
-start_time = time.time()
+from utilities import Timer
+timer = Timer()
 
 a = 999
 b = 999
@@ -26,6 +26,7 @@ def test_palindrome(num):                   # Checks if input is a palindrome
             i += 1
     return False
 
+
 while a > 99:                               # We're only concerned with 3-digit numbers
     b = 999
     while b > 99:
@@ -40,4 +41,4 @@ while a > 99:                               # We're only concerned with 3-digit 
             biggest_palindrome = a * b
 
 print(biggest_palindrome)
-print(time.time() - start_time)
+print(timer.end())

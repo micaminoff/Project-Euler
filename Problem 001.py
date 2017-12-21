@@ -2,10 +2,9 @@
 # 0.0005006790161132812 seconds
 # O(n), could probably be optimized but is fast enough for current input
 
-import time
+from utilities import Timer
 
-
-start_time = time.time()
+timer = Timer()
 sum = 0
 
 for i in range(1, 1000):
@@ -13,4 +12,4 @@ for i in range(1, 1000):
         sum += i
 print(sum)
 
-print(time.time() - start_time)
+print(timer.end())

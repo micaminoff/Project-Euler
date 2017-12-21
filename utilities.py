@@ -27,7 +27,7 @@ class Timer:
         self.start_time = time.time()
 
     def end(self):
-        secs, ms = divmod((time.time()-self.start_time)*100, 100)
+        secs, ms = divmod((time.time()-self.start_time)*1000, 1000)
         mins, secs = divmod(secs, 60)
         hrs, mins = divmod(mins, 60)
-        return '%02d:%02d:%02d:%03d' % (hrs, mins, secs, ms)
+        return '%01d:%02d:%02d:%03d' % (hrs, mins, secs, ms)

@@ -3,9 +3,9 @@
 # <0.001s
 # O(n), no optimization needed
 
-import time
-start_time = time.time()
+from utilities import Timer
 
+timer = Timer()
 num1 = 1
 num2 = 1
 fib = 0
@@ -20,4 +20,4 @@ while fib < 4000000:
     num2 = fib          # this is an unnecessary variable but I'm lazy
 
 print(sum)
-print(time.time() - start_time)
+print(timer.end())
