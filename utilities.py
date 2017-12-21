@@ -1,4 +1,5 @@
 import time
+import math
 
 
 def e_sieve(limit):
@@ -17,6 +18,15 @@ def e_sieve(limit):
             not_prime.add(j)
         e_primes.append(i)
     return e_primes
+
+
+def is_prime(num):
+    if num == 1:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:                    # If num is evenly divisible by any number 2-sqrt(num) it cannot be prime
+            return False
+    return True
 
 
 class Timer:
