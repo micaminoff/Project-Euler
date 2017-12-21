@@ -12,12 +12,10 @@ timer = Timer()
 
 def is_palindrome(num):
     num = str(num)              # Convert input to string
-    num = num.lstrip('0')       # Strip 0 from 0b... binary representation of int
-    num = num.lstrip('b')       # Strip b from 0b... --"--
-    num = num.lstrip('0')       # Strip all possible leading zeroes
+    num = num.lstrip('0b')      # Strip 0b from 0b... binary representation of int
     reversed_str = list(reversed(num))  # Reverse num for faster second half checking
     if len(num) == 1:
-        return True             # len(1) num must be palindrome
+        return True             # len(num)==1 must be palindrome
     if len(num) % 2 != 0:
         first_half = num[0:ceil(len(num)/2)]    # Get halfway
         second_half = ''.join(reversed_str[0:ceil(len(num) / 2)])   # Get halfway in reversed string
